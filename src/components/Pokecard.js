@@ -44,10 +44,13 @@ function Pokecard(props) {
     const { url, openModal } = props
 
     const [pokemonDetails, setPokemonDetails] = useState(null)
-
+    // console.log('props', props)
+    // console.log('url', url)
+    // console.log('openModal',openModal)
     useEffect(() => {
         axios.get(url).then((response) => {
             setPokemonDetails(response.data)
+            // console.log('axios',response.data)
         });
     }, [url]);
 
